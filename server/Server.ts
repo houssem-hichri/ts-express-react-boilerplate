@@ -63,7 +63,7 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 // });
 
 
-app.use(express.static(path.join(__dirname, "..", 'projectFE', "build")));
+app.use(express.static(path.join(__dirname, "..", 'app', "build")));
 app.use(express.static("public"));
 
 // Export express instance

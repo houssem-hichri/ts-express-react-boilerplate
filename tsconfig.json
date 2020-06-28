@@ -14,16 +14,16 @@
     "moduleResolution": "node",
     "paths": {
       "@daos/*": [
-        "src/daos/*"
+        "server/daos/*"
       ],
       "@entities/*": [
-        "src/entities/*"
+        "server/entities/*"
       ],
       "@shared/*": [
-        "src/shared/*"
+        "server/shared/*"
       ],
       "@server": [
-        "src/Server"
+        "server/Server"
       ]
     },
     "types": [
@@ -34,10 +34,10 @@
     ]
   },
   "include": [
-    "src/**/*.ts",
+    "server/**/*.ts",
     "spec/**/*.ts"
   ],
   "exclude": [
-    "src/public/"
+    "server/public/"
   ]
 }

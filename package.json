@@ -2,25 +2,25 @@
   "name": "ts-express-react-boilerplate",
   "version": "0.0.0",
   "scripts": {
-    "fe:build": "cd projectFE && npm run build",
+    "fe:build": "cd app && npm run build",
     "build": "node build.js",
     "lint": "tslint --project \"tsconfig.json\"",
     "start": "node -r module-alias/register ./dist --env=production",
-    "start:dev": "npm run fe:build && nodemon",
+    "start:dev": "nodemon",
     "test": "nodemon --config ./spec/nodemon.json"
   },
   "nodemonConfig": {
     "watch": [
-      "src",
-      "projectFE"
+      "server",
+      "app"
     ],
     "ext": "ts, tsx, html",
     "ignore": [
-      "src/public",
-      "projectFE/node_modules",
-      "projectFE/build"
+      "server/public",
+      "app/node_modules",
+      "app/build"
     ],
-    "exec": "ts-node -r tsconfig-paths/register ./src"
+    "exec": "npm run fe:build && ts-node -r tsconfig-paths/register ./server"
   },
   "_moduleAliases": {
     "@daos": "dist/daos",
